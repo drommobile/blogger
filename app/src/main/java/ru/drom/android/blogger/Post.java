@@ -1,6 +1,6 @@
 package ru.drom.android.blogger;
 
-import org.jetbrains.annotations.Nullable;
+import android.support.annotation.Nullable;
 
 @SuppressWarnings("WeakerAccess")
 public class Post {

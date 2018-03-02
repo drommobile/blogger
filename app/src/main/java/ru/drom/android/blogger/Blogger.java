@@ -1,10 +1,9 @@
 package ru.drom.android.blogger;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,11 +38,11 @@ public class Blogger {
 		publish(Post.Priority.DEBUG, tag, message, null);
 	}
 
-	public static void df(@NotNull String format, Object... args) {
+	public static void df(@NonNull String format, Object... args) {
 		df(generateTag(), format, args);
 	}
 
-	public static void df(String tag, @NotNull String format, Object... args) {
+	public static void df(String tag, @NonNull String format, Object... args) {
 		publish(Post.Priority.DEBUG, tag, String.format(format, args), null);
 	}
 
@@ -53,11 +52,11 @@ public class Blogger {
 	 * @param format Формат строки
 	 * @param args   Аргументы, для замены {} в формате строки
 	 */
-	public static void debug(@NotNull String format, Object... args) {
+	public static void debug(@NonNull String format, Object... args) {
 		debug(generateTag(), format, args);
 	}
 
-	public static void debug(String tag, @NotNull String format, Object... args) {
+	public static void debug(String tag, @NonNull String format, Object... args) {
 		String result = format;
 		for (Object arg : args) {
 			result = result.replaceFirst("\\{\\}", String.valueOf(arg));
