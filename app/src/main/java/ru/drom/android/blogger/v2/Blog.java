@@ -1,5 +1,5 @@
 package ru.drom.android.blogger.v2;
 
-public interface Blog<T extends Event> {
-	void handle(T event);
+public abstract class Blog<T extends Event> {
+	public abstract void handle(T event);
 }

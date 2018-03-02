@@ -3,7 +3,7 @@ package ru.drom.android.blogger.v2;
 import android.text.TextUtils;
 import android.util.Log;
 
-public class SimpleLogBlog implements Blog<LogEvent> {
+public class SimpleLogBlog extends Blog<LogEvent> {
 	@Override
 	public void handle(LogEvent event) {
 		switch (event.priority) {
